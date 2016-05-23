@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Management Project</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/chat.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+
+    <div class="container" id="loginSingnUpContainer">    
+        <div id="loginbox" style="display:block;margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title">Sign In</div>
+                        <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#"  onclick="$('#signupbox').hide(); $('#loginbox').hide();$('#forgotPassword').show()";>Forgot password?</a></div>
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                            
+                        <form id="loginform" class="form-horizontal" role="form">
+                                    
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input id="inputEmail" type="text" class="form-control" name="username" id="inputEmail" value="" placeholder="username or email">                                        
+                                    </div>
+                                
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input id="inputPassword" type="password" class="form-control" name="password" placeholder="password">
+                                    </div>
+                                    
+
+                                
+                            <div class="input-group">
+                                      <div class="checkbox">
+                                        <label>
+                                          <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                                        </label>
+                                      </div>
+                                    </div>
+
+
+                                <div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-sm-12 controls">
+                                      <a id="btn-login" href="#" class="btn btn-success">Login  </a>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-md-12 control">
+                                        <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                            Don't have an account! 
+                                        <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                            Sign Up Here
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </form>     
+
+
+
+                        </div>                     
+                    </div>  
+        </div>
+        
+          
+          <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">Sign Up</div>
+ <div style="float:right; font-size: 85%; position: relative; top:-10px">
+    <a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show();$('#forgotPassword').hide();">Sign In</a></div>
+                        </div>  
+                        <div class="panel-body" >
+                            <form id="signupform" class="form-horizontal" role="form">
+                                
+                                <div id="signupalert" style="display:none" class="alert alert-danger">
+                                    <p>Error:</p>
+                                    <span></span>
+                                </div>
+                                    
+                                
+                                  
+                                <div class="form-group">
+                                    <label for="email" class="col-md-3 control-label">Email</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" id="email" name="email" placeholder="Email Address" required>
+                                    </div>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <label for="firstname" class="col-md-3 control-label">User Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="firstname" id="UserName" placeholder="User Name">
+                                    </div>
+                                </div>
+                               
+                                <div class="form-group">
+                                    <label for="password" class="col-md-3 control-label">Password</label>
+                                    <div class="col-md-9">
+                                        <input type="password" class="form-control" name="passwd" id="passwd" placeholder="Password">
+                                    </div>
+                                </div>
+                                  
+
+                                   <div class="form-group">
+                                    <label for="password" class="col-md-3 control-label">Gender</label>
+                                    <div class="col-md-9">
+                                        <label class="radio-inline"><input id="femaleId" type="radio" name="optradio" checked>Female</label>
+                                        <label class="radio-inline"><input  id="maleId" type="radio" name="optradio">Male</label>
+                                    </div>
+                                </div>
+ 
+                                
+                                <div class="form-group">
+                                    <!-- Button -->                                        
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+                                    </div>
+                                </div>
+
+
+                                 <form role="form">
+                                    
+                                  </form>
+                            </form>
+                         </div>
+                    </div>
+
+               
+               
+                
+         </div> 
+
+
+          <div id="forgotPassword" style="display:none;margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">Forgot Password</div>
+ <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show();$('#forgotPassword').hide()">Sign In</a></div>
+                        </div>  
+                        <div class="panel-body" >
+                            <form id="signupform" class="form-horizontal" role="form">
+                                
+                                <div id="signupalert" style="display:none" class="alert alert-danger">
+                                    <p>Error:</p>
+                                    <span></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email" class="col-md-3 control-label">Email</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" id="forgotEmail" name="email" placeholder="Email Address" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <!-- Button -->                                        
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="forgotPassSubmit" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Submit</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                         </div>
+                   </div>
+         </div> 
+    </div>
+
+   
+    
+        <div id="sidebar-wrapper" style="right:0px; left:inherit; width:250px; background:#D9EDF7;top: 0px;">
+           
+              <!--   <li class="sidebar-brand"> -->
+
+
+                 <div id="chatContainer" style="bottom:0;">
+
+                <div id="chat_tools" style="bottom:0;position:absolute">
+                
+                     
+                 <div>
+                    </div>
+                 </div>   
+                </div>
+               </div>
+          
+  
+
+        </div>
+  
+    <div style="display:none;background:#000; position:absolute;top:0;bottom:0;width:100%;z-index:2;text-align:center;opacity:0.8" >
+       <img src="images/ajax-loader.gif" style="padding-top:20%">
+    </div>
+
+    <!-- chat window -->
+
+      <div id="ChatWindow" style="margin-top:50px; display: none" class="mainbox col-md-9">
+       <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title">Chat system</div>
+                        <div style="float:right; font-size: 80%; position: relative; top:-10px"></div>
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                                             <div style="height:420px">
+                                              At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.                                              
+                                          </div>
+                        </div>                     
+
+                    </div> 
+       
+
+       <div style="bottom:0"> 
+        <textarea rows="2" cols="120" style="resize:none;" maxlength="100">
+        At w3schools.com you will learn how to make a website.
+
+        </textarea> 
+        <span style="top:10px;float:right">  
+        <button type="button" class="btn btn-success btn-lg">Send</button>
+        </span>  
+       </div> 
+  </div>
+
+
+
+
+   <div id="footerId" class="footer navbar-fixed-bottom" style="width:82.5%">
+        
+   </div>
+
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="client.js"></script>
+        <script src="addUser.js"></script>
+        <script src="socket.io.js"></script>
+         <script src="chat.js"></script>
+
+    <!-- Menu Toggle Script -->
+    
+</body>
+
+</html>
